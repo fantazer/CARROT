@@ -1,0 +1,108 @@
+mixin header()
+	//block header
+	.header
+		//header-top
+		.header-top-wrap
+			.main-cont
+				.header-top
+					.head-toggle
+						+icon("menu","icon icon-open")
+						+icon("close","icon icon-close")
+					a(href="/").logo
+						img(src="img/logo.svg", alt="")
+
+					.header-info.header-info--location
+						.header-info__icon
+							+icon("market","icon")
+						.header-info-wrap
+							.header-info__val Краснодар
+							.header-info__text Восточно-Кругликовская
+					.header-info.header-info--contact
+						.header-info__icon
+							+icon("phone","icon")
+						.header-info-wrap
+							a(href="tel:8 918 990 91 43").header-info__val  8 918 990 91 43
+							.header-info__text ежедневно с 9 до 22
+					.header-cont
+						.header-auth.header-auth--true
+							// toggle .header-auth--true
+							+icon("user","icon")
+							.header-auth-state--true
+								span Войти
+							.header-auth-state--false
+								span Александр
+						.nav
+							-
+								var items = [
+									'Акции',
+									'Доставка',
+									'Отзывы',
+									'О нас'
+									];
+							each item in items
+								a(href="#").nav__el #{item}
+						.cart-wrap.cart-wrap--mobile
+							.cart
+								+icon("close","icon icon--close")
+								+icon("cart--color","icon icon--open")
+								.cart-val 33
+		.slide-menu
+			.mobile-location
+				.mobile-location__icon
+					+icon("location","icon")
+				.mobile-location__val Санкт-Петербург
+			.mobile-row.mobile-row--deliver
+				a(href="#") Доставка за 45-90 минут
+			.mobile-menu
+				-
+					var items = [
+						'Акции',
+						'Доставка',
+						'Отзывы',
+						'Контакты',
+						'О компании',
+						'Новости',
+						'Карьера',
+						];
+				each item in items
+					a(href="#").mobile-menu__el #{item}
+			a(href="#").mobile-lk
+				+icon("user","icon")
+				span Личный кабинет
+			.mobile-phone
+				.mobile-phone__icon
+					+icon("phone","icon")
+				.mobile-phone-cont
+					a(href="tel:8 918 990 91 43").mobile-phone__val 8 918 990 91 43
+					.mobile-time Сегодня 10 - 24
+
+
+		.header-menu-wrap
+			.main-cont
+				.header-menu
+					a(href="/").logo
+						img(src="img/logo.svg", alt="")
+					.header-nav
+						-
+							var items = [
+								'Фрукты',
+								'Овощи',
+								'Зелень',
+								'Ягоды',
+								'Орехи и сухофрукты',
+								'Смузи и соки',
+								'Экзотика',
+								'Бакалея',
+								];
+						each item in items
+							a(href="#").header-nav__el #{item}
+					.header-search
+						+icon("magnifying-glass","icon")
+						input(type="text" placeholder="Поиск" class="input")
+						.header-search__result
+					.cart-wrap.cart-wrap--desctop
+						.cart-cost 2 850 ₽
+						.cart
+							.cart-val 33
+							+icon("cart","icon")
+	//block header end

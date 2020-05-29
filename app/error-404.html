@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<!--create by ANATOLY KUZNETSOV-->
+<!--contact mail:kuznecovs45@gmail.com skype:an_kuznetcov-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--colors-tabs-->
+    <meta name="theme-color" content="#000" />
+    <meta name="msapplication-navbutton-color" content="#000" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+    <!--SEO-->
+    <title>Document</title>
+    <meta name="description" itemprop="description" content="" />
+    <!--build:css ./css/vendor.css-->
+    <link rel="stylesheet" href="bower/normalize.css/normalize.css" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="bower/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="bower/slick-carousel/slick/slick-theme.css" />
+    <link rel="stylesheet" href="bower/jquery-nice-select/css/nice-select.css" />
+    <!--link(rel="stylesheet", href="bower/ion.rangeSlider/css/ion.rangeSlider.css")-->
+    <!--endbuild-->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style-edit.css" />
+</head>
+
+<body>
+    <div class="page">
+        <!--block header-->
+        <div class="header">
+            <!--header-top-->
+            <div class="header-top-wrap">
+                <div class="main-cont">
+                    <div class="header-top">
+                        <div class="head-toggle">
+                            <svg class="icon icon-open">
+                                <use xlink:href="#menu"></use>
+                            </svg>
+                            <svg class="icon icon-close">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <a class="logo" href="/">
+                            <img src="img/logo.svg" alt="" />
+                        </a>
+                        <div class="header-info header-info--location">
+                            <div class="header-info__icon">
+                                <svg class="icon">
+                                    <use xlink:href="#market"></use>
+                                </svg>
+                            </div>
+                            <div class="header-info-wrap">
+                                <div class="header-info__val">Краснодар</div>
+                                <div class="header-info__text">Восточно-Кругликовская</div>
+                            </div>
+                        </div>
+                        <div class="header-info header-info--contact">
+                            <div class="header-info__icon">
+                                <svg class="icon">
+                                    <use xlink:href="#phone"></use>
+                                </svg>
+                            </div>
+                            <div class="header-info-wrap">
+                                <a class="header-info__val" href="tel:8 918 990 91 43">8 918 990 91 43</a>
+                                <div class="header-info__text">ежедневно с 9 до 22</div>
+                            </div>
+                        </div>
+                        <div class="header-cont">
+                            <div class="header-auth header-auth--true">
+                                <!-- toggle .header-auth--true-->
+                                <svg class="icon">
+                                    <use xlink:href="#user"></use>
+                                </svg>
+                                <div class="header-auth-state--true">
+                                    <span>Войти</span>
+                                </div>
+                                <div class="header-auth-state--false">
+                                    <span>Александр</span>
+                                </div>
+                            </div>
+                            <div class="nav">
+                                <a class="nav__el" href="#">Акции</a>
+                                <a class="nav__el" href="#">Доставка</a>
+                                <a class="nav__el" href="#">Отзывы</a>
+                                <a class="nav__el" href="#">О нас</a>
+                            </div>
+                            <div class="cart-wrap cart-wrap--mobile">
+                                <div class="cart">
+                                    <svg class="icon icon--close">
+                                        <use xlink:href="#close"></use>
+                                    </svg>
+                                    <svg class="icon icon--open">
+                                        <use xlink:href="#cart--color"></use>
+                                    </svg>
+                                    <div class="cart-val">33</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-menu">
+                <div class="mobile-location">
+                    <div class="mobile-location__icon">
+                        <svg class="icon">
+                            <use xlink:href="#location"></use>
+                        </svg>
+                    </div>
+                    <div class="mobile-location__val">Санкт-Петербург</div>
+                </div>
+                <div class="mobile-row mobile-row--deliver">
+                    <a href="#">Доставка за 45-90 минут</a>
+                </div>
+                <div class="mobile-menu">
+                    <a class="mobile-menu__el" href="#">Акции</a>
+                    <a class="mobile-menu__el" href="#">Доставка</a>
+                    <a class="mobile-menu__el" href="#">Отзывы</a>
+                    <a class="mobile-menu__el" href="#">Контакты</a>
+                    <a class="mobile-menu__el" href="#">О компании</a>
+                    <a class="mobile-menu__el" href="#">Новости</a>
+                    <a class="mobile-menu__el" href="#">Карьера</a>
+                </div>
+                <a class="mobile-lk" href="#">
+                    <svg class="icon">
+                        <use xlink:href="#user"></use>
+                    </svg>
+                    <span>Личный кабинет</span>
+                </a>
+                <div class="mobile-phone">
+                    <div class="mobile-phone__icon">
+                        <svg class="icon">
+                            <use xlink:href="#phone"></use>
+                        </svg>
+                    </div>
+                    <div class="mobile-phone-cont">
+                        <a class="mobile-phone__val" href="tel:8 918 990 91 43">8 918 990 91 43</a>
+                        <div class="mobile-time">Сегодня 10 - 24</div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu-wrap">
+                <div class="main-cont">
+                    <div class="header-menu">
+                        <a class="logo" href="/">
+                            <img src="img/logo.svg" alt="" />
+                        </a>
+                        <div class="header-nav">
+                            <a class="header-nav__el" href="#">Фрукты</a>
+                            <a class="header-nav__el" href="#">Овощи</a>
+                            <a class="header-nav__el" href="#">Зелень</a>
+                            <a class="header-nav__el" href="#">Ягоды</a>
+                            <a class="header-nav__el" href="#">Орехи и сухофрукты</a>
+                            <a class="header-nav__el" href="#">Смузи и соки</a>
+                            <a class="header-nav__el" href="#">Экзотика</a>
+                            <a class="header-nav__el" href="#">Бакалея</a>
+                        </div>
+                        <div class="header-search">
+                            <svg class="icon">
+                                <use xlink:href="#magnifying-glass"></use>
+                            </svg>
+                            <input class="input" type="text" placeholder="Поиск" />
+                            <div class="header-search__result"></div>
+                        </div>
+                        <div class="cart-wrap cart-wrap--desctop">
+                            <div class="cart-cost">2 850 ₽</div>
+                            <div class="cart">
+                                <div class="cart-val">33</div>
+                                <svg class="icon">
+                                    <use xlink:href="#cart"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--block header end-->
+        <div class="content content content--mid">
+            <!--product-cont-->
+            <div class="main-cont">
+                <div class="page-error">
+                    <div class="page-error__title">Ошибка</div>
+                    <div class="page-error__img">
+                        <img src="img/404.svg" alt="" />
+                    </div>
+                    <div class="page-error__text">Страница не найдена</div>
+                    <a class="page-error__get" href="#">на главную</a>
+                </div>
+            </div>
+        </div>
+        <!--block footer-->
+        <!--block footer end-->
+    </div>
+    <!--build:js ./js/combined.js-->
+    <script src="bower/jquery/dist/jquery.js"></script>
+    <script src="bower/slick-carousel/slick/slick.js"></script>
+    <script src="bower/jquery.nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="bower/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+    <!--script(src="bower/ion.rangeSlider/js/ion.rangeSlider.js")-->
+    <!-- endbuild-->
+    <script src="./js/add-on.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/script-edit.js"></script>
+</body>
+
+</html>

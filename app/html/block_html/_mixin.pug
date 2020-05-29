@@ -1,0 +1,64 @@
+mixin icon(name,cls)
+  svg(class=cls)
+    use(xlink:href="#" + name)
+
+mixin checkbox(text,disable)
+  .check-el
+    if disable
+      label.style-label.style-label--checkbox.style-label--disable
+        input(type="checkbox").style-input
+        .style-input-element
+          +icon("checked","icon-check")
+        .style-input-text=text
+    else
+      label.style-label.style-label--checkbox
+        input(type="checkbox").style-input
+        .style-input-element
+          +icon("checked","icon-check")
+        .style-input-text=text
+mixin radio(text,group,checked)
+  .check-el
+    label.style-label.style-label--radio
+      input(type="radio" name=group checked=checked).style-input
+      .style-input-element
+        .icon-radio
+      .style-input-text=text
+
+mixin incr(a,type)
+  - a = a || 1
+  .elements-icr-block
+    .incr(class=type?type:'')
+      .incr__minus.incr__nav
+        +icon("minus","icon")
+      .incr__val
+        span=a
+        .incr__val-coner
+      .incr__plus.incr__nav
+        +icon("plus","icon")
+
+mixin product(img)
+  .product-el
+    .product-el--add
+      +icon("cart","icon")
+    .label-wrap
+      .label-el
+        .label-el-cont
+          +icon("plant","icon icon--green")
+      .label-el
+        .label-el-cont
+          +icon("less","icon icon--mark")
+          span Низкая цена
+    .product__img
+      .product__img-el(style="background-image:url(img/"+img+")")
+      .product-rating
+        +icon("star","icon")
+        span 5
+    .product__cont
+      .product__title Яблоки Делишес
+      .product__text Россия, Краснодарский край
+      .product-footer
+        .product-price 860 р.
+        .product-weight ~ 1,5 кг
+        .product-add купить
+        .product-incr
+          +incr()

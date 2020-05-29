@@ -1,0 +1,53 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.main-slider
+		- for (var i=0;i<4;i++)
+			a(href="#").main-slider__el-wrap
+				.main-slider__el(style="background-image:url('img/slider-1.jpg')")
+	.content
+		.main-cont
+			.kind
+				// .icon--pink = fill #c9346e; .icon--red = fill #d6362e;.icon--green =	fill #019547;.icon--violet = fill #6421bc;.icon--mark = fill $mark;.icon--sky =  fill #1db4aa
+				.kind__el.kind__el--active
+					+icon("calendar","icon icon--pink")
+					span Сезонный продукт
+				.kind__el
+					+icon("hot","icon icon--red")
+					span Хит
+				.kind__el
+					+icon("plant","icon icon--green")
+					span Выращено на Кубани
+				.kind__el
+					+icon("play","icon icon--green")
+					span Начало сезона
+				.kind__el
+					+icon("flag","icon icon--violet")
+					span Конец сезона
+				.kind__el
+					+icon("less","icon icon--mark")
+					span Низкая цена
+				.kind__el
+					+icon("king","icon icon--sky")
+					span Эксклюзив
+		.main-cont
+			.title-row
+				.title Фрукты
+					.title-val 15
+				a(href="#").title__more Смотреть все
+			.product-cont
+				- for (var i=0;i< 9;i++)
+					+product("item-1.jpg")
+
+			.title-row
+				.title Овощи
+					.title-val 15
+				a(href="#").title__more Смотреть все
+			.product-cont
+				- for (var i=0;i< 9;i++)
+					+product("item-2.jpg")
+
+	+footer()
+include ./block_html/_script.pug
