@@ -5,11 +5,12 @@ mixin header()
 		.header-top-wrap
 			.main-cont
 				.header-top
-					.head-toggle
+					.head-toggle.js-slide-block-toggle(data-menu="menu")
 						+icon("menu","icon icon-open")
 						+icon("close","icon icon-close")
 					a(href="/").logo
-						img(src="img/logo.svg", alt="")
+						img(src="img/logo.svg", alt="").logo--desktop
+						img(src="img/logo--line.svg", alt="").logo--mobile
 
 					.header-info.header-info--location
 						.header-info__icon
@@ -41,68 +42,146 @@ mixin header()
 									];
 							each item in items
 								a(href="#").nav__el #{item}
-						.cart-wrap.cart-wrap--mobile
-							.cart
-								+icon("close","icon icon--close")
-								+icon("cart--color","icon icon--open")
-								.cart-val 33
-		.slide-menu
-			.mobile-location
-				.mobile-location__icon
-					+icon("location","icon")
-				.mobile-location__val Санкт-Петербург
-			.mobile-row.mobile-row--deliver
-				a(href="#") Доставка за 45-90 минут
-			.mobile-menu
-				-
-					var items = [
-						'Акции',
-						'Доставка',
-						'Отзывы',
-						'Контакты',
-						'О компании',
-						'Новости',
-						'Карьера',
-						];
-				each item in items
-					a(href="#").mobile-menu__el #{item}
-			a(href="#").mobile-lk
-				+icon("user","icon")
-				span Личный кабинет
-			.mobile-phone
-				.mobile-phone__icon
-					+icon("phone","icon")
-				.mobile-phone-cont
-					a(href="tel:8 918 990 91 43").mobile-phone__val 8 918 990 91 43
-					.mobile-time Сегодня 10 - 24
-
-
+					.cart-wrap.cart-wrap--mobile
+						a(href="#").cart-link
+						.cart.js-slide-block-toggle(data-menu="cart")
+							.cart-val 33
+							+icon("cart","icon icon--open")
 		.header-menu-wrap
 			.main-cont
 				.header-menu
 					a(href="/").logo
-						img(src="img/logo.svg", alt="")
+						img(src="img/logo--sm.svg", alt="")
 					.header-nav
 						-
 							var items = [
-								'Фрукты',
-								'Овощи',
-								'Зелень',
-								'Ягоды',
-								'Орехи и сухофрукты',
-								'Смузи и соки',
-								'Экзотика',
-								'Бакалея',
-								];
+								{name: "Фрукты", id: "#fruits"},
+								{name: "Овощи", id: "#vegetables"},
+								{name: "Зелень", id: "#green"},
+								{name: "Ягоды", id: "#berries"},
+								{name: "Орехи и сухофрукты", id: "#nuts"},
+								{name: "Смузи и соки", id: "#juice"},
+								{name: "Экзотика", id: "#exotic"},
+								{name: "Бакалея", id: "#grocery"},
+							];
 						each item in items
-							a(href="#").header-nav__el #{item}
+							a(href=item.id rel='m_PageScroll2id' ).header-nav__el #{item.name}
+
 					.header-search
 						+icon("magnifying-glass","icon")
 						input(type="text" placeholder="Поиск" class="input")
 						.header-search__result
-					.cart-wrap.cart-wrap--desctop
+					.cart-wrap.cart-wrap--desctop.js-slide-block-toggle(data-menu="cart")
 						.cart-cost 2 850 ₽
 						.cart
 							.cart-val 33
 							+icon("cart","icon")
+		//slide block cart
+		.slide-block.slide-block--right.slide-block--cart(data-menu="cart")
+			.slide-block-wrap
+				.basket-wrap
+					.basket--false.hidden
+						//remove .hidden for empty
+						.basket-head
+							.basket-head__title Ваша корзина
+							.basket-head__close.js-slide-block-toggle(data-menu="cart")
+								+icon("close","icon")
+						.basket-empty
+							img(src="img/empty.svg", alt="").basket-empty-img
+							.basket-empty__title Корзина пуста :(
+							.basket-empty__text Бесплатная доставка от 500 ₽, доставляем за 60 минут
+					.basket
+						//add .hidden for empty
+						.basket-head
+							.basket-head__title У вас в корзине
+							.basket-head__close.js-slide-block-toggle(data-menu="cart")
+								+icon("close","icon")
+
+						.basket-list
+							.basket-container.scroll
+								- for (var i=0;i<8;i++)
+									.basket__el
+										.basket__el-info
+											.basket__img(style="background-image:url('img/item-3.jpg')")
+											.basket__cont
+												.basket__name
+													span Ветчина и грибы #{i + 1}
+													.basket__delete
+														+icon("delete","icon")
+												.basket__el-change
+													.basket__inc
+														+incr(1,"incr--small")
+													.basket__price 120 р.
+													.basket__weight ~ 0,5 кг
+
+						.basket-add-head Рекомендуем также заказать
+						.basket-add
+							- for (var i=0;i<8;i++)
+								.basket-add__el
+									.basket-add-info
+										.basket-add__img(style="background-image:url('img/item-4.jpg')")
+										.basket-add-cont
+											.basket-add-title Ананас Королевский
+											.basket-add-cost 380 р
+											.basket-add-get купить
+						//basket-footer
+						.basket-footer
+							.basket-total
+								.basket-total-row
+									.basket-total__text Доставка
+									.basket-total__val 500 ₽
+								.basket-total-row
+									.basket-total__text Сумма заказа
+									.basket-total__val 2 169 ₽
+						a(href="#").basket-get Перейти в корзину
+
+
+		.slide-block.slide-block--left.slide-block--menu(data-menu="menu")
+			.slide-menu-search
+				+icon("search","icon")
+				input(type="text" placeholder="Поиск товарам" class="input")
+			.slide-nav
+				-
+					var items = [
+						{name: "Фрукты", id: "#fruits"},
+						{name: "Овощи", id: "#vegetables"},
+						{name: "Зелень", id: "#green"},
+						{name: "Ягоды", id: "#berries"},
+						{name: "Орехи и сухофрукты", id: "#nuts"},
+						{name: "Смузи и соки", id: "#juice"},
+						{name: "Экзотика", id: "#exotic"},
+						{name: "Бакалея", id: "#grocery"},
+					];
+				each item in items
+					a(href = item.id rel = 'm_PageScroll2id' ).slide-nav__el #{item.name}
+			.slide-row
+				.header-info.header-info--location
+					.header-info__icon
+						+icon("market","icon")
+					.header-info-wrap
+						.header-info__val Краснодар
+						.header-info__text Восточно-Кругликовская
+			.slide-row
+				.header-info.header-info--contact
+					.header-info__icon
+						+icon("phone","icon")
+					.header-info-wrap
+						a(href="tel:8 918 990 91 43").header-info__val  8 918 990 91 43
+						.header-info__text ежедневно с 9 до 22
+			.slide-row
+				.slide-header-auth.slide-header-auth--true
+					// toggle .slide-header-auth--true
+					+icon("user","icon")
+					.slide-header-auth-state--true
+						span.user-state Войти
+					.slide-header-auth-state--false
+						span.user-state Александр
+			.slide-row
+				.slide-menu__list
+					a(href="#").slide-menu__list-el Акции
+					a(href="#").slide-menu__list-el Доставка
+					a(href="#").slide-menu__list-el Отзывы
+					a(href="#").slide-menu__list-el О нас
+
+
 	//block header end

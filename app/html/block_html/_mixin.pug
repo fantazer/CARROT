@@ -49,6 +49,14 @@ mixin product(img)
           +icon("less","icon icon--mark")
           span Низкая цена
     .product__img
+      .magnify.hidden
+        //remove hidden on mobile incr
+        .magnify-row
+          .magnify-nav.magnify-nav--minus
+            +icon("minus","icon")
+          .magnify-val 1 кг
+          .magnify-nav.magnify-nav--plus
+            +icon("plus","icon")
       .product__img-el(style="background-image:url(img/"+img+")")
       .product-rating
         +icon("star","icon")
@@ -57,6 +65,8 @@ mixin product(img)
       .product__title Яблоки Делишес
       .product__text Россия, Краснодарский край
       .product-footer
+        .product-add-mobile
+          +icon("plus","icon")
         .product-price 860 р.
         .product-weight ~ 1,5 кг
         .product-add купить
