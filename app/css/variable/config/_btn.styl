@@ -6,6 +6,7 @@
 	background none
 	border 0
 	text-align: center
+	font-weight: 700
 	&:hover
 		cursor pointer
 
@@ -17,12 +18,13 @@
 .btn--md
 	@extend .btn
 	font-size 16px
-	padding 13px 35px
+	padding 15px 35px
 
 .btn--lg
+	+below(640px)
+		padding: 10px 15px
 	@extend .btn
-	font-size 20px
-	padding 10px 30px
+	padding 15px 65px
 
 .btn--mobile
 	@extend .btn
@@ -37,10 +39,10 @@
 	.nav-icon
 		fill white
 	&:hover
-		background-color darken($mark,20)
+		background-color lighten($mark,5)
 		color white!important
 	&:active
-		background-color darken($mark,20)
+		background-color lighten($mark,5)
 	input[type="submit"]
 		border 0
 	.nav-icon
@@ -90,3 +92,5 @@
 .btn--full
 	width: 100%
 	display block
+.btn--extend
+	margin-bottom: 20px

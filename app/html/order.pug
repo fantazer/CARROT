@@ -1,0 +1,46 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+
++header()
+.content
+	.main-cont
+		.title-row
+			a(href="#").title-back
+				+icon("round-arrow-left","icon")
+			.title Корзина
+		.order
+			.order-cont
+				.order-item
+					- for (var i=0;i<3;i++)
+						.order__el
+							.order__el-info
+								a(href="#" style="background-image:url('img/item-4.jpg')" ).order__img
+								.order__name
+									a(href="#").order__name-text Яблоки Делишес
+									.order__adds Россия, Краснодарский край
+
+							.order__el-change
+								.order__price 120 р.
+								.order__inc
+									+incr()
+								.order__delete
+									+icon("delete","icon")
+				.total
+					.total-row
+						.total-row__type + доставка
+						.total-row__val 500 ₽
+					.total-text бесплатная доставка от 900₽ добавьте в корзину что-то вкусненькое
+					.total-row
+						.total-row__type Сумма заказа
+						.total-row__val 3 895 ₽
+					.total-get Оформить заказ
+
+		.title--lgx Рекомендуем попробовать
+		.order-add
+			- for (var i=0;i< 4;i++)
+				+product("item-1.jpg")
+
+
++footer()
+include ./block_html/_script.pug

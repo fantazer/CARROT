@@ -1,0 +1,116 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
++header(page ="header--main-page")
+
+
+.content
+	.main-cont
+		.title-row
+			a(href="#").title-back
+				+icon("round-arrow-left","icon")
+			.title Оформление заказа
+		.order-form
+			.form-cont
+				.input-cont
+					.input-row
+						input(type="text"  placeholder="Ваше имя").input
+				.input-cont.input-cont--two
+					.input-row
+						input(type="text"  placeholder="Телефон").input
+					.input-row
+						input(type="text"  placeholder="Email").input
+			.form-cont
+				.title--md Оплата:
+				.radio-cont
+					+radio('Наличные курьеру','payment')
+					+radio('Картой курьеру','payment')
+					+radio('Онлайн','payment')
+			.form-cont
+				//tab controll
+				.order-form__tab
+					.order-form__tab-el.order-form__tab-el--active(data-tab="deliver") Доставка
+					.order-form__tab-el(data-tab="self") Самовывоз
+				.order-form__border
+					.order-form__border-el
+
+
+			//tab container
+			.order-form__tab-container.order-form__tab-container-active(data-tab="deliver")
+				.order-form__town Ваш город:
+					span Москва
+				.input-cont
+					.input-row
+						input(type="text"  placeholder="Улица").input
+				.input-cont.input-cont--three
+					.input-row
+						input(type="text" placeholder="Дом").input
+					.input-row
+						input(type="text" placeholder="Квартира").input
+					.input-row
+						input(type="text" placeholder="Этаж").input
+				.input-cont.input-cont--three
+					.input-row
+						input(type="text" placeholder="Корпус").input
+					.input-row
+						input(type="text" placeholder="Подьезд").input
+					.input-row
+						input(type="text" placeholder="Домофон").input
+			//tab container
+			.order-form__tab-container(data-tab="self")
+				.order-form__town Ваш город:
+					span Москва
+				.order-form__market
+					select.select-beauty
+						option(data-display="Выберите ресторан") Новый ресторан
+						option Первый ресторан
+						option Второй ресторан
+						option Третий ресторан
+						option Третий ресторан
+						option Третий ресторан
+
+			.title--md Время доставки
+			.input-cont.input-cont--two
+				.input-row
+					select.select-beauty
+						option Сегодня
+						option Завтра
+						option 6 марта
+						option 7 марта
+						option 8 марта
+						option 9 марта
+				.input-row
+					select.select-beauty
+						option 10:30
+						option 10:45
+						option 11:00
+						option 11:15
+						option 11:30
+						option 11:45
+						option 12:00
+			.order-form-inc
+				.order-form-inc__text Количество персон
+				.elements-icr-block
+					.incr
+						.incr__minus.incr__nav.incr--one
+							+icon("minus","icon")
+						.incr__val
+							span 1
+							.incr__val-coner
+						.incr__plus.incr__nav
+							+icon("plus","icon")
+
+			textarea(name="", cols="30", rows="10" placeholder="Комментарий" class="input")
+			.login-remember
+				.check-el
+					label.style-label.style-label--checkbox
+						input(type="checkbox").style-input
+						.style-input-element
+						.style-input-text Я ознакомился с #[a(href="#") политикой конфиденциальности], #[a(href="#") публичной офертой] и даю согласие на обработку моих персональных данных
+			.order-form-get
+				.btn--lg.btn--mobile.btn--mark  Заказать
++footer()
+//+mobile-menu()
+
+include ./block_html/_script.pug
+
