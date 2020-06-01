@@ -1,0 +1,37 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+			.title Отзывы
+			.review
+				.review-wrap
+					- for (var j=0;j<5;j++)
+						.review__el
+							.review__el-info
+								.review__el-name Валентина
+							.review__el-date 15 марта 2019 13:04
+							.review__el-text.text
+								p Курьер приехал даже немного раньше, передача была бесконтактная ))) Все продукты были аккуратно упакованы и очень свежие) СПАСИБО!
+							.answer
+								.answer-head__icon
+									img(src="img/logo-line--simple.svg", alt="")
+								.answer-text.text
+									p Благодарим за приятные слова! Довольные покупатели - наша лучшая награда.
+				.review-msg
+					.msg
+						.msg__icon
+							img(src="img/message.svg", alt="")
+						.msg__title Напишите отзыв
+						.msg__text Помогите сделать наш сервис еще лучше! =)
+						.msg__get.btn--md.btn--mark.btn--full Написать отзыв
+
+			.btn-row-mid
+				.btn--md.btn--light Показать еще
+	+footer()
+include ./block_html/_script.pug
+
+
+

@@ -1,0 +1,18 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+			h1 Акции
+			.card-list
+				- for (var i=0;i<8;i++)
+					.card-list__el
+						.card-list__img(style="background-image:url('img/img-3.jpg')")
+						.card-list__info
+							.card-list__title Малина по скидке
+							.card-list__decr В пресс-службе рекомендовали покупать овощи и фрукты только на сельскохозяйственных рынках, магазинах и павильонах.
+
+	+footer()
+include ./block_html/_script.pug

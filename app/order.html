@@ -27,14 +27,6 @@
 </head>
 
 <body>
-    <style type="text/css">
-        .btn-wrap {
-        		display: flex;
-        		flex-wrap: wrap;
-        		flex-flow: column;
-        		align-items: baseline;
-        	}
-    </style>
     <!--block header-->
     <div class="header">
         <!--header-top-->
@@ -659,34 +651,477 @@
     <!--block header end-->
     <div class="content">
         <div class="main-cont">
-            <p>Чтобы вызвать нужное окно добавь на элемент класс .modal-get и data-modal="имя окна"</p>
-            <p>Чтобы добавить метод закрытия окна по клику на элемент добавиь класс .modal-send</p>
-            <div class="btn-wrap">
-                <div class="btn--md btn--mark modal-get" data-modal="registration">Регистрация | data-modal="registration"</div>
-                <br/>
-                <div class="btn--md btn--mark modal-get" data-modal="enter">Регистрация | data-modal="enter"</div>
-                <br/>
-                <div class="btn--md btn--mark modal-get" data-modal="town">Выберите город | data-modal="town"</div>
-                <br/>
-                <div class="btn--md btn--mark modal-get" data-modal="pass">Восстановление пароля | data-modal="pass"</div>
-                <br/>
-                <div class="btn--md btn--mark modal-get" data-modal="TY">Заказ принят | data-modal="TY"</div>
-                <br/>
-                <div class="btn--md btn--mark modal-get" data-modal="area">Выбор города | data-modal="area"</div>
-                <br/>
-                <div class="btn--md btn--mark modal-get" data-modal="deliver">Выбор типа доставки | data-modal="deliver"</div>
-                <br/>
-                <div class="btn--md btn--mark modal-get" data-modal="disposal">Выбор адреса | data-modal="disposal"</div>
-                <br/>
-                <div class="btn--md btn--mark modal-get" data-modal="unworked">Ресторан не работает | data-modal="unworked"</div>
-                <br/>
-                <div class="btn--md btn--mark modal-get" data-modal="profile">Редактировать профиль | data-modal="profile"</div>
-                <br/>
-                <div class="btn--md btn--mark modal-get" data-modal="address">Редактировать Адрес | data-modal="address"</div>
-                <br/>
-                <div class="btn--md btn--mark modal-get" data-modal="review">Оставить отзыв | data-modal="review"</div>
-                <br/>
-                <div class="btn--md btn--mark modal-get" data-modal="item">Карточка товара | data-modal="item"</div>
+            <div class="title-row">
+                <a class="title-back" href="#">
+                    <svg class="icon">
+                        <use xlink:href="#round-arrow-left"></use>
+                    </svg>
+                </a>
+                <div class="title">Корзина</div>
+            </div>
+            <div class="order">
+                <div class="order-cont">
+                    <div class="order-item">
+                        <div class="order__el">
+                            <div class="order__el-info">
+                                <a class="order__img" href="#" style="background-image:url('img/item-4.jpg')"></a>
+                                <div class="order__name">
+                                    <a class="order__name-text" href="#">Яблоки Делишес</a>
+                                    <div class="order__adds">Россия, Краснодарский край</div>
+                                </div>
+                            </div>
+                            <div class="order__el-change">
+                                <div class="order__price">120 р.</div>
+                                <div class="order__inc">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span>1</span>
+                                                <div class="incr__val-coner"></div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order__delete">
+                                    <svg class="icon">
+                                        <use xlink:href="#delete"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order__el">
+                            <div class="order__el-info">
+                                <a class="order__img" href="#" style="background-image:url('img/item-4.jpg')"></a>
+                                <div class="order__name">
+                                    <a class="order__name-text" href="#">Яблоки Делишес</a>
+                                    <div class="order__adds">Россия, Краснодарский край</div>
+                                </div>
+                            </div>
+                            <div class="order__el-change">
+                                <div class="order__price">120 р.</div>
+                                <div class="order__inc">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span>1</span>
+                                                <div class="incr__val-coner"></div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order__delete">
+                                    <svg class="icon">
+                                        <use xlink:href="#delete"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order__el">
+                            <div class="order__el-info">
+                                <a class="order__img" href="#" style="background-image:url('img/item-4.jpg')"></a>
+                                <div class="order__name">
+                                    <a class="order__name-text" href="#">Яблоки Делишес</a>
+                                    <div class="order__adds">Россия, Краснодарский край</div>
+                                </div>
+                            </div>
+                            <div class="order__el-change">
+                                <div class="order__price">120 р.</div>
+                                <div class="order__inc">
+                                    <div class="elements-icr-block">
+                                        <div class="incr">
+                                            <div class="incr__minus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#minus"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="incr__val">
+                                                <span>1</span>
+                                                <div class="incr__val-coner"></div>
+                                            </div>
+                                            <div class="incr__plus incr__nav">
+                                                <svg class="icon">
+                                                    <use xlink:href="#plus"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order__delete">
+                                    <svg class="icon">
+                                        <use xlink:href="#delete"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="total">
+                        <div class="total-row">
+                            <div class="total-row__type">+ доставка</div>
+                            <div class="total-row__val">500 ₽</div>
+                        </div>
+                        <div class="total-text">бесплатная доставка от 900₽ добавьте в корзину что-то вкусненькое</div>
+                        <div class="total-row">
+                            <div class="total-row__type">Сумма заказа</div>
+                            <div class="total-row__val">3 895 ₽</div>
+                        </div>
+                        <div class="total-get">Оформить заказ</div>
+                    </div>
+                </div>
+            </div>
+            <div class="title--lgx">Рекомендуем попробовать</div>
+            <div class="order-add">
+                <div class="product-el">
+                    <div class="product-el--add">
+                        <svg class="icon">
+                            <use xlink:href="#cart"></use>
+                        </svg>
+                    </div>
+                    <div class="label-wrap">
+                        <div class="label-el">
+                            <div class="label-el-cont">
+                                <svg class="icon icon--green">
+                                    <use xlink:href="#plant"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="label-el">
+                            <div class="label-el-cont">
+                                <svg class="icon icon--mark">
+                                    <use xlink:href="#less"></use>
+                                </svg>
+                                <span>Низкая цена</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__img">
+                        <div class="magnify hidden">
+                            <!--remove hidden on mobile incr-->
+                            <div class="magnify-row">
+                                <div class="magnify-nav magnify-nav--minus">
+                                    <svg class="icon">
+                                        <use xlink:href="#minus"></use>
+                                    </svg>
+                                </div>
+                                <div class="magnify-val">1 кг</div>
+                                <div class="magnify-nav magnify-nav--plus">
+                                    <svg class="icon">
+                                        <use xlink:href="#plus"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__img-el" style="background-image:url(img/item-1.jpg)"></div>
+                        <div class="product-rating">
+                            <svg class="icon">
+                                <use xlink:href="#star"></use>
+                            </svg>
+                            <span>5</span>
+                        </div>
+                    </div>
+                    <div class="product__cont">
+                        <div class="product__title">Яблоки Делишес</div>
+                        <div class="product__text">Россия, Краснодарский край</div>
+                        <div class="product-footer">
+                            <div class="product-add-mobile">
+                                <svg class="icon">
+                                    <use xlink:href="#plus"></use>
+                                </svg>
+                            </div>
+                            <div class="product-price">860 р.</div>
+                            <div class="product-weight">~ 1,5 кг</div>
+                            <div class="product-add">купить</div>
+                            <div class="product-incr">
+                                <div class="elements-icr-block">
+                                    <div class="incr">
+                                        <div class="incr__minus incr__nav">
+                                            <svg class="icon">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="incr__val">
+                                            <span>1</span>
+                                            <div class="incr__val-coner"></div>
+                                        </div>
+                                        <div class="incr__plus incr__nav">
+                                            <svg class="icon">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-el">
+                    <div class="product-el--add">
+                        <svg class="icon">
+                            <use xlink:href="#cart"></use>
+                        </svg>
+                    </div>
+                    <div class="label-wrap">
+                        <div class="label-el">
+                            <div class="label-el-cont">
+                                <svg class="icon icon--green">
+                                    <use xlink:href="#plant"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="label-el">
+                            <div class="label-el-cont">
+                                <svg class="icon icon--mark">
+                                    <use xlink:href="#less"></use>
+                                </svg>
+                                <span>Низкая цена</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__img">
+                        <div class="magnify hidden">
+                            <!--remove hidden on mobile incr-->
+                            <div class="magnify-row">
+                                <div class="magnify-nav magnify-nav--minus">
+                                    <svg class="icon">
+                                        <use xlink:href="#minus"></use>
+                                    </svg>
+                                </div>
+                                <div class="magnify-val">1 кг</div>
+                                <div class="magnify-nav magnify-nav--plus">
+                                    <svg class="icon">
+                                        <use xlink:href="#plus"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__img-el" style="background-image:url(img/item-1.jpg)"></div>
+                        <div class="product-rating">
+                            <svg class="icon">
+                                <use xlink:href="#star"></use>
+                            </svg>
+                            <span>5</span>
+                        </div>
+                    </div>
+                    <div class="product__cont">
+                        <div class="product__title">Яблоки Делишес</div>
+                        <div class="product__text">Россия, Краснодарский край</div>
+                        <div class="product-footer">
+                            <div class="product-add-mobile">
+                                <svg class="icon">
+                                    <use xlink:href="#plus"></use>
+                                </svg>
+                            </div>
+                            <div class="product-price">860 р.</div>
+                            <div class="product-weight">~ 1,5 кг</div>
+                            <div class="product-add">купить</div>
+                            <div class="product-incr">
+                                <div class="elements-icr-block">
+                                    <div class="incr">
+                                        <div class="incr__minus incr__nav">
+                                            <svg class="icon">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="incr__val">
+                                            <span>1</span>
+                                            <div class="incr__val-coner"></div>
+                                        </div>
+                                        <div class="incr__plus incr__nav">
+                                            <svg class="icon">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-el">
+                    <div class="product-el--add">
+                        <svg class="icon">
+                            <use xlink:href="#cart"></use>
+                        </svg>
+                    </div>
+                    <div class="label-wrap">
+                        <div class="label-el">
+                            <div class="label-el-cont">
+                                <svg class="icon icon--green">
+                                    <use xlink:href="#plant"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="label-el">
+                            <div class="label-el-cont">
+                                <svg class="icon icon--mark">
+                                    <use xlink:href="#less"></use>
+                                </svg>
+                                <span>Низкая цена</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__img">
+                        <div class="magnify hidden">
+                            <!--remove hidden on mobile incr-->
+                            <div class="magnify-row">
+                                <div class="magnify-nav magnify-nav--minus">
+                                    <svg class="icon">
+                                        <use xlink:href="#minus"></use>
+                                    </svg>
+                                </div>
+                                <div class="magnify-val">1 кг</div>
+                                <div class="magnify-nav magnify-nav--plus">
+                                    <svg class="icon">
+                                        <use xlink:href="#plus"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__img-el" style="background-image:url(img/item-1.jpg)"></div>
+                        <div class="product-rating">
+                            <svg class="icon">
+                                <use xlink:href="#star"></use>
+                            </svg>
+                            <span>5</span>
+                        </div>
+                    </div>
+                    <div class="product__cont">
+                        <div class="product__title">Яблоки Делишес</div>
+                        <div class="product__text">Россия, Краснодарский край</div>
+                        <div class="product-footer">
+                            <div class="product-add-mobile">
+                                <svg class="icon">
+                                    <use xlink:href="#plus"></use>
+                                </svg>
+                            </div>
+                            <div class="product-price">860 р.</div>
+                            <div class="product-weight">~ 1,5 кг</div>
+                            <div class="product-add">купить</div>
+                            <div class="product-incr">
+                                <div class="elements-icr-block">
+                                    <div class="incr">
+                                        <div class="incr__minus incr__nav">
+                                            <svg class="icon">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="incr__val">
+                                            <span>1</span>
+                                            <div class="incr__val-coner"></div>
+                                        </div>
+                                        <div class="incr__plus incr__nav">
+                                            <svg class="icon">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-el">
+                    <div class="product-el--add">
+                        <svg class="icon">
+                            <use xlink:href="#cart"></use>
+                        </svg>
+                    </div>
+                    <div class="label-wrap">
+                        <div class="label-el">
+                            <div class="label-el-cont">
+                                <svg class="icon icon--green">
+                                    <use xlink:href="#plant"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="label-el">
+                            <div class="label-el-cont">
+                                <svg class="icon icon--mark">
+                                    <use xlink:href="#less"></use>
+                                </svg>
+                                <span>Низкая цена</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__img">
+                        <div class="magnify hidden">
+                            <!--remove hidden on mobile incr-->
+                            <div class="magnify-row">
+                                <div class="magnify-nav magnify-nav--minus">
+                                    <svg class="icon">
+                                        <use xlink:href="#minus"></use>
+                                    </svg>
+                                </div>
+                                <div class="magnify-val">1 кг</div>
+                                <div class="magnify-nav magnify-nav--plus">
+                                    <svg class="icon">
+                                        <use xlink:href="#plus"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__img-el" style="background-image:url(img/item-1.jpg)"></div>
+                        <div class="product-rating">
+                            <svg class="icon">
+                                <use xlink:href="#star"></use>
+                            </svg>
+                            <span>5</span>
+                        </div>
+                    </div>
+                    <div class="product__cont">
+                        <div class="product__title">Яблоки Делишес</div>
+                        <div class="product__text">Россия, Краснодарский край</div>
+                        <div class="product-footer">
+                            <div class="product-add-mobile">
+                                <svg class="icon">
+                                    <use xlink:href="#plus"></use>
+                                </svg>
+                            </div>
+                            <div class="product-price">860 р.</div>
+                            <div class="product-weight">~ 1,5 кг</div>
+                            <div class="product-add">купить</div>
+                            <div class="product-incr">
+                                <div class="elements-icr-block">
+                                    <div class="incr">
+                                        <div class="incr__minus incr__nav">
+                                            <svg class="icon">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="incr__val">
+                                            <span>1</span>
+                                            <div class="incr__val-coner"></div>
+                                        </div>
+                                        <div class="incr__plus incr__nav">
+                                            <svg class="icon">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -712,634 +1147,6 @@
         </div>
     </div>
     <!--block footer end-->
-    <!--block modal-->
-    <div class="modal-layer">
-        <div class="modal-cont">
-            <div class="modal-filter"></div>
-            <div class="modal-wrap">
-                <!--modal-registration-->
-                <div class="modal" data-modal="registration">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <div class="modal-close">
-                                <svg class="icon">
-                                    <use xlink:href="#close-fat"></use>
-                                </svg>
-                            </div>
-                            <div class="modal-title">Регистрация</div>
-                        </div>
-                        <form action="#">
-                            <div class="input-cont">
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Ваше имя" />
-                                </div>
-                            </div>
-                            <div class="input-cont input-cont--two">
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Телефон" />
-                                </div>
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Email" />
-                                </div>
-                            </div>
-                            <div class="input-cont">
-                                <div class="input-row">
-                                    <input class="input" type="password" placeholder="Пароль" />
-                                </div>
-                            </div>
-                            <div class="input-cont">
-                                <div class="input-row">
-                                    <input class="input" type="password" placeholder="Повторите пароль" />
-                                </div>
-                            </div>
-                            <div class="login-remember">
-                                <div class="check-el">
-                                    <label class="style-label style-label--checkbox">
-                                        <input class="style-input" type="checkbox" />
-                                        <div class="style-input-element">
-                                            <svg class="icon-check">
-                                                <use xlink:href="#checked"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="style-input-text">Я ознакомился с
-                                            <a href="#">политикой конфиденциальности</a>,
-                                            <a href="#">публичной офертой</a>и даю согласие на обработку моих персональных данных</div>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="modal-get">
-                                <input class="btn--lg btn--mark btn--full" type="submit" value="Зарегистрировать" />
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <!--modal-registration-end-->
-                <!--modal-enter-->
-                <div class="modal" data-modal="enter">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <div class="modal-close">
-                                <svg class="icon">
-                                    <use xlink:href="#close-fat"></use>
-                                </svg>
-                            </div>
-                            <div class="modal-title">Авторизация</div>
-                        </div>
-                        <form action="#">
-                            <div class="input-cont">
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Телефон" />
-                                </div>
-                            </div>
-                            <div class="input-cont">
-                                <div class="input-row">
-                                    <input class="input" type="password" placeholder="Пароль" />
-                                </div>
-                            </div>
-                            <div class="modal-foget">
-                                <div class="link--blue show-modal" data-modal="pass">Забыли пароль ?</div>
-                            </div>
-                            <div class="modal-get">
-                                <input class="btn--lg btn--mark btn--full" type="submit" value="Войти" />
-                            </div>
-                            <div class="modal-account">
-                                <div class="link--text modal-get" data-modal="registration">Нет аккаунта? зарегистрироваться</div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <!--modal-enter-end-->
-                <!--modal-town-->
-                <div class="modal" data-modal="town">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <div class="modal-close">
-                                <svg class="icon">
-                                    <use xlink:href="#close-fat"></use>
-                                </svg>
-                            </div>
-                            <div class="modal-title">Выберите город</div>
-                        </div>
-                        <div class="modal-town">
-                            <div class="modal-town__el hide-modal">Москва</div>
-                            <div class="modal-town__el hide-modal">Санкт-Петербург</div>
-                        </div>
-                    </div>
-                </div>
-                <!--modal-town-end-->
-                <!--modal-pass-->
-                <div class="modal" data-modal="pass">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <div class="modal-close">
-                                <svg class="icon">
-                                    <use xlink:href="#close-fat"></use>
-                                </svg>
-                            </div>
-                            <div class="modal-title">Восстановление пароля</div>
-                        </div>
-                        <form action="#">
-                            <div class="input-cont">
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Телефон" />
-                                </div>
-                            </div>
-                            <div class="modal-get">
-                                <input class="btn--lg btn--mark btn--full" type="submit" value="Восстановить" />
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <!--modal-pass-end-->
-                <!--TY message-->
-                <div class="modal modal--md" data-modal="TY">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <div class="modal-close">
-                                <svg class="icon">
-                                    <use xlink:href="#close-fat"></use>
-                                </svg>
-                            </div>
-                            <div class="modal-title">Спасибо!
-                                <br>Ваш заказ принят</div>
-                        </div>
-                        <div class="modal-text">Наши менеджеры свяжутся с вами в ближайшее время для подтверждения заказа</div>
-                        <a class="btn--md btn--light btn--full" href="/">На главную</a>
-                    </div>
-                </div>
-                <!--TY message === end-->
-                <!--city area-->
-                <div class="modal modal--xl" data-modal="area">
-                    <div class="modal-content modal-content--clear">
-                        <div class="modal-close modal-close--mark">
-                            <svg class="icon">
-                                <use xlink:href="#close-fat"></use>
-                            </svg>
-                        </div>
-                        <div class="area">
-                            <div class="area-tool">
-                                <div class="area-tool-info">
-                                    <div class="area-tool__title">Выберите магазин, ассортимент которого вы хотите увидеть</div>
-                                </div>
-                                <div class="area-comment">Среднее время доставки
-                                    <span>60 минут</span>
-                                </div>
-                                <div class="order-container">
-                                    <div class="order-cont__el">
-                                        <div class="area-tool-list scroll">
-                                            <div class="area-el area-el--active">
-                                                <div class="area-el__img" style="background-image:url('img/img-1.jpg')"></div>
-                                                <div class="area-el-cont">
-                                                    <div class="area-el-title">Кубанская набережная 33</div>
-                                                    <div class="area-el-row">
-                                                        <span>Тел:</span>89181950700</div>
-                                                    <div class="area-el-row">
-                                                        <span>Время:</span>10:30 - 11:59</div>
-                                                </div>
-                                            </div>
-                                            <div class="area-el">
-                                                <div class="area-el__img" style="background-image:url('img/img-1.jpg')"></div>
-                                                <div class="area-el-cont">
-                                                    <div class="area-el-title">Кубанская набережная 33</div>
-                                                    <div class="area-el-row">
-                                                        <span>Тел:</span>89181950700</div>
-                                                    <div class="area-el-row">
-                                                        <span>Время:</span>10:30 - 11:59</div>
-                                                </div>
-                                            </div>
-                                            <div class="area-el">
-                                                <div class="area-el__img" style="background-image:url('img/img-1.jpg')"></div>
-                                                <div class="area-el-cont">
-                                                    <div class="area-el-title">Кубанская набережная 33</div>
-                                                    <div class="area-el-row">
-                                                        <span>Тел:</span>89181950700</div>
-                                                    <div class="area-el-row">
-                                                        <span>Время:</span>10:30 - 11:59</div>
-                                                </div>
-                                            </div>
-                                            <div class="area-el">
-                                                <div class="area-el__img" style="background-image:url('img/img-1.jpg')"></div>
-                                                <div class="area-el-cont">
-                                                    <div class="area-el-title">Кубанская набережная 33</div>
-                                                    <div class="area-el-row">
-                                                        <span>Тел:</span>89181950700</div>
-                                                    <div class="area-el-row">
-                                                        <span>Время:</span>10:30 - 11:59</div>
-                                                </div>
-                                            </div>
-                                            <div class="area-el">
-                                                <div class="area-el__img" style="background-image:url('img/img-1.jpg')"></div>
-                                                <div class="area-el-cont">
-                                                    <div class="area-el-title">Кубанская набережная 33</div>
-                                                    <div class="area-el-row">
-                                                        <span>Тел:</span>89181950700</div>
-                                                    <div class="area-el-row">
-                                                        <span>Время:</span>10:30 - 11:59</div>
-                                                </div>
-                                            </div>
-                                            <div class="area-el">
-                                                <div class="area-el__img" style="background-image:url('img/img-1.jpg')"></div>
-                                                <div class="area-el-cont">
-                                                    <div class="area-el-title">Кубанская набережная 33</div>
-                                                    <div class="area-el-row">
-                                                        <span>Тел:</span>89181950700</div>
-                                                    <div class="area-el-row">
-                                                        <span>Время:</span>10:30 - 11:59</div>
-                                                </div>
-                                            </div>
-                                            <div class="area-el">
-                                                <div class="area-el__img" style="background-image:url('img/img-1.jpg')"></div>
-                                                <div class="area-el-cont">
-                                                    <div class="area-el-title">Кубанская набережная 33</div>
-                                                    <div class="area-el-row">
-                                                        <span>Тел:</span>89181950700</div>
-                                                    <div class="area-el-row">
-                                                        <span>Время:</span>10:30 - 11:59</div>
-                                                </div>
-                                            </div>
-                                            <div class="area-el">
-                                                <div class="area-el__img" style="background-image:url('img/img-1.jpg')"></div>
-                                                <div class="area-el-cont">
-                                                    <div class="area-el-title">Кубанская набережная 33</div>
-                                                    <div class="area-el-row">
-                                                        <span>Тел:</span>89181950700</div>
-                                                    <div class="area-el-row">
-                                                        <span>Время:</span>10:30 - 11:59</div>
-                                                </div>
-                                            </div>
-                                            <div class="area-el">
-                                                <div class="area-el__img" style="background-image:url('img/img-1.jpg')"></div>
-                                                <div class="area-el-cont">
-                                                    <div class="area-el-title">Кубанская набережная 33</div>
-                                                    <div class="area-el-row">
-                                                        <span>Тел:</span>89181950700</div>
-                                                    <div class="area-el-row">
-                                                        <span>Время:</span>10:30 - 11:59</div>
-                                                </div>
-                                            </div>
-                                            <div class="area-el">
-                                                <div class="area-el__img" style="background-image:url('img/img-1.jpg')"></div>
-                                                <div class="area-el-cont">
-                                                    <div class="area-el-title">Кубанская набережная 33</div>
-                                                    <div class="area-el-row">
-                                                        <span>Тел:</span>89181950700</div>
-                                                    <div class="area-el-row">
-                                                        <span>Время:</span>10:30 - 11:59</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="area-map">
-                                <div class="area-map__el">
-                                    <!--put map code her-->
-                                </div>
-                                <div class="area-msg-layer">
-                                    <!--remove class hidden for area-msg-layer + item msg-->
-                                    <div class="area-msg area-msg--sm">
-                                        <div class="area-msg__text">Отобразить товары магазина?
-                                            <span>ул.Восточно-Кругликовская 18</span>
-                                        </div>
-                                        <div class="btn--md btn--mark">Отобразить</div>
-                                        <div class="btn--md btn--empty">Отмена</div>
-                                    </div>
-                                    <div class="area-msg area-msg--sm hidden">
-                                        <div class="area-msg__text">531 st St is inside the delivery area
-                                            <span>Wafi Mall</span>
-                                        </div>
-                                        <div class="btn--md btn--mark">Confirm</div>
-                                        <div class="btn--md btn--empty">continue selection</div>
-                                    </div>
-                                    <div class="area-msg hidden">
-                                        <div class="area-msg__text">
-                                            <p>Адрес:
-                                                <strong>ул. Живописная, дом 49</strong>
-                                            </p>
-                                            <p>Адрес:
-                                                <strong>ул. Живописная, дом 49</strong>
-                                            </p>
-                                            <p>Время приёма заказов:
-                                                <strong>10 - 23</strong>
-                                            </p>
-                                            <p>Время доставки:
-                                                <strong>35 мин</strong>
-                                            </p>
-                                            <p>Минимальная сумма заказа:
-                                                <strong>500 руб</strong>
-                                            </p>
-                                        </div>
-                                        <div class="area-msg-nav">
-                                            <div class="btn--md btn--mark">Подтверждаю</div>
-                                            <div class="btn--md btn--empty">Продолжить выбор</div>
-                                        </div>
-                                    </div>
-                                    <!--put map her-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--city area === end-->
-                </div>
-                <!--deliver message-->
-                <div class="modal modal--md" data-modal="deliver">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <div class="modal-close">
-                                <svg class="icon">
-                                    <use xlink:href="#close-fat"></use>
-                                </svg>
-                            </div>
-                            <div class="modal-title">Выберите тип доставки</div>
-                        </div>
-                        <div class="btn--md btn--mark btn--full hide-modal">Доставка</div>
-                        <br/>
-                        <div class="btn--md btn--light btn--full hide-modal">Самовывоз</div>
-                    </div>
-                </div>
-                <!--deliver message === end-->
-                <!--address message-->
-                <div class="modal modal--md" data-modal="disposal">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <div class="modal-close">
-                                <svg class="icon">
-                                    <use xlink:href="#close-fat"></use>
-                                </svg>
-                            </div>
-                            <div class="modal-title">Ваш адрес доставки</div>
-                        </div>
-                        <form class="login-form" action="#">
-                            <div class="input-cont">
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Ваша улица" />
-                                </div>
-                            </div>
-                            <div class="input-cont">
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Ваш дом" />
-                                </div>
-                            </div>
-                            <!--toggle class hidden for msg-->
-                        </form>
-                        <div class="btn--md btn--mark btn--full hide-modal">Подтвердить</div>
-                        <p class="type--center">или</p>
-                        <div class="btn--md btn--light btn--full hide-modal">Выбрать самовывоз</div>
-                    </div>
-                </div>
-                <!--address message === end-->
-                <!--unworked message-->
-                <div class="modal modal--md" data-modal="unworked">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <div class="modal-close">
-                                <svg class="icon">
-                                    <use xlink:href="#close-fat"></use>
-                                </svg>
-                            </div>
-                            <div class="modal-title">Магазин не работает :(</div>
-                        </div>
-                        <div class="unworked-text">Магазины доставки в г. Москва работают с 10 до 22:30</div>
-                        <div class="btn--md btn--light btn--full hide-modal">Хорошо</div>
-                    </div>
-                </div>
-                <!--unworked message === end-->
-                <!--profile message-->
-                <div class="modal" data-modal="profile">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <div class="modal-close">
-                                <svg class="icon">
-                                    <use xlink:href="#close-fat"></use>
-                                </svg>
-                            </div>
-                            <div class="modal-title">Профиль</div>
-                        </div>
-                        <form action="#">
-                            <div class="input-cont">
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Фамилия" />
-                                </div>
-                            </div>
-                            <div class="input-cont">
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Имя" />
-                                </div>
-                            </div>
-                            <div class="input-cont">
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Телефон" />
-                                </div>
-                            </div>
-                            <div class="input-cont">
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Дата рождения" />
-                                </div>
-                            </div>
-                            <div class="input-cont">
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Ваша почта" />
-                                </div>
-                            </div>
-                            <div class="btn--md btn--light btn--full">Отправить</div>
-                        </form>
-                    </div>
-                </div>
-                <!--profile message === end-->
-                <!--address message-->
-                <div class="modal modal--md" data-modal="address">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <div class="modal-close">
-                                <svg class="icon">
-                                    <use xlink:href="#close-fat"></use>
-                                </svg>
-                            </div>
-                            <div class="modal-title">Ваш адрес доставки</div>
-                        </div>
-                        <form action="#">
-                            <div class="input-cont">
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Название адреса (дом, работа)" />
-                                </div>
-                            </div>
-                            <div class="input-cont">
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Улица" />
-                                </div>
-                            </div>
-                            <div class="input-cont">
-                                <div class="input-row">
-                                    <select class="select-beauty">
-                                        <option>Адрес 1</option>
-                                        <option>Адрес 2</option>
-                                        <option>Адрес 3</option>
-                                        <option>Адрес 4</option>
-                                        <option>Адрес 5</option>
-                                        <option>Адрес 6</option>
-                                        <option>Адрес 7</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="input-cont input-cont--two">
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Квартира" />
-                                </div>
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Подъезд" />
-                                </div>
-                            </div>
-                            <div class="input-cont input-cont--two">
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Этаж" />
-                                </div>
-                                <div class="input-row">
-                                    <input class="input" type="text" placeholder="Домофон" />
-                                </div>
-                            </div>
-                        </form>
-                        <div class="btn--md btn--light btn--full">Отправить</div>
-                    </div>
-                </div>
-                <!--address message === end-->
-                <!--review-->
-                <div class="modal modal--md modal--light" data-modal="review">
-                    <div class="modal-content">
-                        <div class="modal-close">
-                            <svg class="icon">
-                                <use xlink:href="#close-fat"></use>
-                            </svg>
-                        </div>
-                        <div class="modal-title modal-title--lg">Оставить отзыв</div>
-                        <div class="modal-text">Вам понравились Правила Суши?
-                            <br>Жми лайк!</div>
-                        <form action="#">
-                            <div class="input-cont">
-                                <div class="input-row">
-                                    <input class="input" type="text" name="name" placeholder="Имя" />
-                                </div>
-                            </div>
-                            <div class="input-cont">
-                                <div class="input-row">
-                                    <input class="input" type="text" name="phone" placeholder="Телефон" />
-                                </div>
-                            </div>
-                            <div class="input-cont">
-                                <div class="input-row">
-                                    <input class="input" type="text" name="mail" placeholder="Почта" />
-                                </div>
-                            </div>
-                            <div class="input-cont">
-                                <div class="input-row">
-                                    <textarea class="input" name="text" cols="30" rows="6" placeholder="Cообщение"></textarea>
-                                </div>
-                            </div>
-                            <input class="btn--md btn--mark btn--full" type="submit" value="Отправить" />
-                        </form>
-                    </div>
-                </div>
-                <!--review === end-->
-                <!--review-->
-                <div class="modal modal--md" data-modal="item">
-                    <div class="modal-content modal-content--clear">
-                        <div class="modal-close">
-                            <svg class="icon">
-                                <use xlink:href="#close-fat"></use>
-                            </svg>
-                        </div>
-                        <div class="card-wrap">
-                            <div class="card-img">
-                                <div class="gallery-slider-wrap">
-                                    <div class="gallery-slider">
-                                        <div class="gallery__el" style="background-image:url('img/img-1.jpg')"></div>
-                                        <div class="gallery__el" style="background-image:url('img/img-2.jpg')"></div>
-                                        <div class="gallery__el" style="background-image:url('img/img-3.jpg')"></div>
-                                        <div class="gallery__el" style="background-image:url('img/img-4.jpg')"></div>
-                                        <div class="gallery__el" style="background-image:url('img/img-1.jpg')"></div>
-                                    </div>
-                                    <div class="gallery-slider-nav">
-                                        <div class="gallery__el-nav-wrap">
-                                            <div class="gallery__el-nav" style="background-image:url('img/img-1.jpg')"></div>
-                                        </div>
-                                        <div class="gallery__el-nav-wrap">
-                                            <div class="gallery__el-nav" style="background-image:url('img/img-2.jpg')"></div>
-                                        </div>
-                                        <div class="gallery__el-nav-wrap">
-                                            <div class="gallery__el-nav" style="background-image:url('img/img-3.jpg')"></div>
-                                        </div>
-                                        <div class="gallery__el-nav-wrap">
-                                            <div class="gallery__el-nav" style="background-image:url('img/img-4.jpg')"></div>
-                                        </div>
-                                        <div class="gallery__el-nav-wrap">
-                                            <div class="gallery__el-nav" style="background-image:url('img/img-1.jpg')"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-descr">
-                                <div class="card-rating">
-                                    <svg class="icon">
-                                        <use xlink:href="#star"></use>
-                                    </svg>
-                                    <div class="card-rating__val">4,2/
-                                        <span>8</span>
-                                    </div>
-                                </div>
-                                <div class="card-title">Апельсиновая корочка в шоколадной глазури</div>
-                                <div class="card-info">Россия, Краснодарский край</div>
-                                <div class="card-text">Яблоки, как и все фрукты, лучше всего употреблять в натуральном виде, не подвергая термической обработке. Особенно хорош салат с натертыми яблоком и морковью, изюмом, корицей и горстью слегка поджаренных грецких орехов.</div>
-                                <div class="card-get">
-                                    <div class="card-cost">165 ₽</div>
-                                    <div class="card-weight">~ 1,5 кг</div>
-                                    <div class="card-incr">
-                                        <div class="elements-icr-block">
-                                            <div class="incr">
-                                                <div class="incr__minus incr__nav">
-                                                    <svg class="icon">
-                                                        <use xlink:href="#minus"></use>
-                                                    </svg>
-                                                </div>
-                                                <div class="incr__val">
-                                                    <span>1</span>
-                                                    <div class="incr__val-coner"></div>
-                                                </div>
-                                                <div class="incr__plus incr__nav">
-                                                    <svg class="icon">
-                                                        <use xlink:href="#plus"></use>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="structure">
-                                    <div class="structure__el">
-                                        <div class="structure__el-name">калории</div>
-                                        <div class="structure__el-val">2841</div>
-                                    </div>
-                                    <div class="structure__el">
-                                        <div class="structure__el-name">белки</div>
-                                        <div class="structure__el-val">75,4</div>
-                                    </div>
-                                    <div class="structure__el">
-                                        <div class="structure__el-name">жиры</div>
-                                        <div class="structure__el-val">111,5</div>
-                                    </div>
-                                    <div class="structure__el">
-                                        <div class="structure__el-name">углеводы</div>
-                                        <div class="structure__el-val">198,2</div>
-                                    </div>
-                                </div>
-                                <div class="structure-text">энергетическая ценность указана за 100 г</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--review === end-->
-            </div>
-        </div>
-    </div>
-    <!--block modal end-->
     <!--build:js ./js/combined.js-->
     <script src="bower/jquery/dist/jquery.js"></script>
     <script src="bower/slick-carousel/slick/slick.js"></script>

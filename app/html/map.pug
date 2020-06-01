@@ -1,0 +1,65 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.main-cont
+			.title Доставка и оплата
+			.deliver-list
+				.deliver-list__el.deliver-list__el--active
+					.deliver-list__title Режим работы
+					.deliver-list-wrap
+						.deliver-list-col
+							.deliver-list-col__title Доставка
+							.deliver-list-col__text 10.00 - 01.00 (Вс - Чт)
+							.deliver-list-col__text 10.00 - 02.00 (Пт - Сб)
+						.deliver-list-col
+							.deliver-list-col__title Приём заказов
+							.deliver-list-col__text 10.00 - 01.00 (Вс - Чт)
+							.deliver-list-col__text 10.00 - 02.00 (Пт - Сб)
+				.deliver-list__el
+					.deliver-list__title 60 минуты
+					.deliver-list__title-sub Среднее время доставки
+					.deliver-list__title-text Наши кафе в каждом районе города
+
+				.deliver-list__el
+					.deliver-list__title Бесплатная доставка
+					.deliver-list__title-sub При заказе от 600 руб.
+					.deliver-list__title-text Минимальная сумма заказа 300 рублей
+
+			.deliver-map
+				.deliver-map__item
+					.deliver-map__item-el
+						//put map her
+				.deliver-map__col
+					.deliver-map__col-item
+						.title--sm Зона доставки
+						.deliver-map__text Если Вы не нашли на карте место, в которое хотите заказать еду: уточните подробности о доставке у оператора по номеру:
+						.deliver-map__phone 8 918 990 91 43
+					.deliver-map__col-item
+						.title--sm Оплата заказа
+						.deliver-map__text Оплатить заказ можно <strong>онлайн</strong> и <strong>наличными</strong>. Доставка или выдача при самовывозе товара, оплаченного пластиковой картой, осуществляется от времени зачисления денег на счет компании.
+
+						.deliver-payment-wrap
+							img(src="img/payment.svg", alt="")
+			.deliver-inform
+				.text
+					h2 Наши магазины
+					.market
+						- for (var i=0;i<8;i++)
+							.market-row
+								.market__val ул. Кубанская набережная 33
+								.market__val 8 918 077 36 36
+								.market__val Luchko@morkov.me
+					h3 Оплата
+					p Вы можете оплатить свой заказ банковской картой на сайте или наличными деньгами при получении, банковской картой при получении.
+
+					p Наш сайт подключен к интернет-эквайрингу, и Вы можете оплатить Товар банковской картой Visa, MasterCard, Maestro и МИР. После подтверждения выбранного Товара откроется защищенное окно с платежной страницей процессингового центра CloudPayments, где Вам необходимо ввести данные Вашей банковской карты. Для дополнительной аутентификации держателя карты используется протокол 3D Secure. Если Ваш Банк поддерживает данную технологию, Вы будете перенаправлены на его сервер для дополнительной идентификации. Информацию о правилах и методах дополнительной идентификации уточняйте в Банке, выдавшем Вам банковскую карту.
+
+					p Для оплаты заказа банковской картой на сайте необходимо выбрать пункт "Оплата онлайн". После успешной оплаты заказа данные о нем будут переданы нам для выполнения. В случае возникновения ошибки необходимо выбрать другой способ оплаты или связаться с оператором по телефону 8 495 123 45 67.
+	+footer()
+include ./block_html/_script.pug
+
+
+

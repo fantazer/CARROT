@@ -1,37 +1,337 @@
 mixin modal()
+	//block modal
 	.modal-layer
-		.modal-filter
-		.modal-wrap
-			.modal(data-modal="order")
-				.modal-content
-					.modal-close
-						+icon("close","icon")
-					.modal-title Оставьте заявку
-					.modal-text Обращаетесь к нам впервые? <br> Оформите обращение с помощью этой формы, мы перезвоним Вам и проконсультируем по любому Вашему вопросу совершенно бесплатно!
-					form.validate-form( action="javascript:void(null);")
-						.input-row
-							input(type="text" name="name" placeholder="Ваше имя").input
-						.input-row
-							input(type="text" name="phone" placeholder="Ваш телефон").input
-						.input-row
-							textarea(name="info", cols="30", rows="5" placeholder="Сообщение").input
-						.agree-row
-							.check-el
-								label.style-label.style-label--checkbox
-									input(type="checkbox" name="agree").sytle-input
-									.sytle-input-element
-										+icon("checked","icon-check")
-									.sytle-input-text=text
-							.agree-row__text Согласен с
-								a(href="#") условиями обработки персональных данных
-						input(type="submit" value="Отправить заявку").modal-send
-			//success message
-			.modal(data-modal="true")
-				.modal-content.modal-content--true
-					.modal-close
-						+icon("close-fat","icon")
-					+icon("check-round","icon icon-msg")
-					.modal-text-true Сообщение отправленно
+		.modal-cont
+			.modal-filter
+			.modal-wrap
+				//modal-registration
+				.modal(data-modal="registration")
+					.modal-content
+						.modal-header
+							.modal-close
+								+icon("close-fat","icon")
+							.modal-title Регистрация
+						form(action="#")
+							.input-cont
+								.input-row
+									input(type="text"  placeholder="Ваше имя").input
+							.input-cont.input-cont--two
+								.input-row
+									input(type="text"  placeholder="Телефон").input
+								.input-row
+									input(type="text"  placeholder="Email").input
+							.input-cont
+								.input-row
+									input(type="password"  placeholder="Пароль").input
+							.input-cont
+								.input-row
+									input(type="password"  placeholder="Повторите пароль").input
+							.login-remember
+								.check-el
+									label.style-label.style-label--checkbox
+										input(type="checkbox").style-input
+										.style-input-element
+											+icon("checked","icon-check")
+										.style-input-text Я ознакомился с #[a(href="#") политикой конфиденциальности], #[a(href="#") публичной офертой] и даю согласие на обработку моих персональных данных
+							.modal-get
+								input(type="submit" value="Зарегистрировать").btn--lg.btn--mark.btn--full
 
-	a(href="#" data-modal="order").modal-get Открыть модальное окно
+				//modal-registration-end
 
+				//modal-enter
+				.modal(data-modal="enter")
+					.modal-content
+						.modal-header
+							.modal-close
+								+icon("close-fat","icon")
+							.modal-title Авторизация
+						form(action="#")
+							.input-cont
+								.input-row
+									input(type="text"  placeholder="Телефон").input
+							.input-cont
+								.input-row
+									input(type="password"  placeholder="Пароль").input
+							.modal-foget
+								.link--blue.show-modal(data-modal="pass") Забыли пароль ?
+							.modal-get
+								input(type="submit" value="Войти").btn--lg.btn--mark.btn--full
+							.modal-account
+								.link--text.modal-get(data-modal="registration") Нет аккаунта? зарегистрироваться
+				//modal-enter-end
+
+				//modal-town
+				.modal(data-modal="town")
+					.modal-content
+						.modal-header
+							.modal-close
+								+icon("close-fat","icon")
+							.modal-title Выберите город
+						.modal-town
+							.modal-town__el.hide-modal Москва
+							.modal-town__el.hide-modal Санкт-Петербург
+				//modal-town-end
+
+
+				//modal-pass
+				.modal(data-modal="pass")
+					.modal-content
+						.modal-header
+							.modal-close
+								+icon("close-fat","icon")
+							.modal-title Восстановление пароля
+						form(action="#")
+							.input-cont
+								.input-row
+									input(type="text"  placeholder="Телефон").input
+							.modal-get
+								input(type="submit" value="Восстановить").btn--lg.btn--mark.btn--full
+				//modal-pass-end
+
+
+				//TY message
+				.modal.modal--md(data-modal="TY")
+					.modal-content
+						.modal-header
+							.modal-close
+								+icon("close-fat","icon")
+							.modal-title Спасибо! <br> Ваш заказ принят
+						.modal-text Наши менеджеры свяжутся с вами в ближайшее время для подтверждения заказа
+						a(href="/").btn--md.btn--light.btn--full На главную
+				//TY message === end
+
+				//city area
+				.modal.modal--xl(data-modal="area")
+					.modal-content.modal-content--clear
+						.modal-close.modal-close--mark
+							+icon("close-fat","icon")
+						.area
+							.area-tool
+								.area-tool-info
+									.area-tool__title Выберите магазин, ассортимент которого вы хотите увидеть
+								.area-comment Среднее время доставки #[span 60 минут]
+								.order-container
+									.order-cont__el
+										.area-tool-list.scroll
+											- for (var i=0;i<10;i++)
+												.area-el(class=i === 0 ? 'area-el--active' : '')
+													.area-el__img(style="background-image:url('img/img-1.jpg')")
+													.area-el-cont
+														.area-el-title Кубанская набережная 33
+														.area-el-row <span>Тел:</span> 89181950700
+														.area-el-row <span>Время:</span> 10:30 - 11:59
+							.area-map
+								.area-map__el
+									//put map code her
+								.area-msg-layer
+									//remove class hidden for area-msg-layer + item msg
+									.area-msg.area-msg--sm
+										.area-msg__text Отобразить товары магазина?
+											span ул.Восточно-Кругликовская 18
+										.btn--md.btn--mark Отобразить
+										.btn--md.btn--empty Отмена
+									.area-msg.area-msg--sm.hidden
+										.area-msg__text 531 st St is inside the delivery area
+											span Wafi Mall
+										.btn--md.btn--mark Confirm
+										.btn--md.btn--empty continue selection
+									.area-msg.hidden
+										.area-msg__text
+											p Адрес: <strong>ул. Живописная, дом 49 </strong>
+											p Адрес: <strong>ул. Живописная, дом 49 </strong>
+											p Время приёма заказов: <strong>10 - 23 </strong>
+											p Время доставки: <strong>35 мин </strong>
+											p Минимальная сумма заказа: <strong>500 руб </strong>
+										.area-msg-nav
+											.btn--md.btn--mark Подтверждаю
+											.btn--md.btn--empty Продолжить выбор
+									//put map her
+					//city area === end
+
+				//deliver message
+				.modal.modal--md(data-modal="deliver")
+					.modal-content
+						.modal-header
+							.modal-close
+								+icon("close-fat","icon")
+							.modal-title Выберите тип доставки
+						.btn--md.btn--mark.btn--full.hide-modal Доставка
+						br
+						.btn--md.btn--light.btn--full.hide-modal Самовывоз
+				//deliver message === end
+
+				//address message
+				.modal.modal--md(data-modal="disposal")
+					.modal-content
+						.modal-header
+							.modal-close
+								+icon("close-fat","icon")
+							.modal-title Ваш адрес доставки
+						form(action="#").login-form
+							.input-cont
+								.input-row
+									input(type="text"  placeholder="Ваша улица").input
+							.input-cont
+								.input-row
+									input(type="text"  placeholder="Ваш дом").input
+							//toggle class hidden for msg
+
+						.btn--md.btn--mark.btn--full.hide-modal Подтвердить
+						p.type--center или
+						.btn--md.btn--light.btn--full.hide-modal Выбрать самовывоз
+				//address message === end
+
+				//unworked message
+				.modal.modal--md(data-modal="unworked")
+					.modal-content
+						.modal-header
+							.modal-close
+								+icon("close-fat","icon")
+							.modal-title Магазин не работает :(
+						.unworked-text Магазины доставки в г. Москва работают с 10 до 22:30
+						.btn--md.btn--light.btn--full.hide-modal Хорошо
+				//unworked message === end
+
+				//profile message
+				.modal(data-modal="profile")
+					.modal-content
+						.modal-header
+							.modal-close
+								+icon("close-fat","icon")
+							.modal-title Профиль
+						form(action="#")
+							.input-cont
+								.input-row
+									input(type="text" placeholder="Фамилия").input
+							.input-cont
+								.input-row
+									input(type="text" placeholder="Имя").input
+							.input-cont
+								.input-row
+									input(type="text" placeholder="Телефон").input
+							.input-cont
+								.input-row
+									input(type="text" placeholder="Дата рождения").input
+							.input-cont
+								.input-row
+									input(type="text" placeholder="Ваша почта").input
+							.btn--md.btn--light.btn--full Отправить
+				//profile message === end
+
+				//address message
+				.modal.modal--md(data-modal="address")
+					.modal-content
+						.modal-header
+							.modal-close
+								+icon("close-fat","icon")
+							.modal-title Ваш адрес доставки
+						form(action="#")
+							.input-cont
+								.input-row
+									input(type="text"  placeholder="Название адреса (дом, работа)").input
+							.input-cont
+								.input-row
+									input(type="text" placeholder="Улица").input
+							.input-cont
+								.input-row
+									select.select-beauty
+										- for (var i=0;i<5;i++)
+										option Адрес 1
+										option Адрес 2
+										option Адрес 3
+										option Адрес 4
+										option Адрес 5
+										option Адрес 6
+										option Адрес 7
+							.input-cont.input-cont--two
+								.input-row
+									input(type="text"  placeholder="Квартира").input
+								.input-row
+									input(type="text"  placeholder="Подъезд").input
+							.input-cont.input-cont--two
+								.input-row
+									input(type="text"  placeholder="Этаж").input
+								.input-row
+									input(type="text"  placeholder="Домофон").input
+						.btn--md.btn--light.btn--full Отправить
+				//address message === end
+
+				//review
+				.modal.modal--md.modal--light(data-modal="review")
+					.modal-content
+						.modal-close
+							+icon("close-fat","icon")
+						.modal-title.modal-title--lg Оставить отзыв
+						.modal-text Вам понравились Правила Суши? <br> Жми лайк!
+						form( action="#")
+							.input-cont
+								.input-row
+									input(type="text" name="name"  placeholder="Имя").input
+							.input-cont
+								.input-row
+									input(type="text" name="phone" placeholder="Телефон").input
+							.input-cont
+								.input-row
+									input(type="text" name="mail" placeholder="Почта").input
+							.input-cont
+								.input-row
+									textarea(name="text", cols="30", rows="6" class="input" placeholder="Cообщение")
+							input(type="submit" value="Отправить").btn--md.btn--mark.btn--full
+				//review === end
+
+				//review
+				.modal.modal--md(data-modal="item")
+					.modal-content.modal-content--clear
+						.modal-close
+							+icon("close-fat","icon")
+						.card-wrap
+							.card-img
+								.gallery-slider-wrap
+									.gallery-slider
+											.gallery__el(style="background-image:url('img/img-1.jpg')")
+											.gallery__el(style="background-image:url('img/img-2.jpg')")
+											.gallery__el(style="background-image:url('img/img-3.jpg')")
+											.gallery__el(style="background-image:url('img/img-4.jpg')")
+											.gallery__el(style="background-image:url('img/img-1.jpg')")
+
+									.gallery-slider-nav
+										.gallery__el-nav-wrap
+											.gallery__el-nav(style="background-image:url('img/img-1.jpg')")
+										.gallery__el-nav-wrap
+											.gallery__el-nav(style="background-image:url('img/img-2.jpg')")
+										.gallery__el-nav-wrap
+											.gallery__el-nav(style="background-image:url('img/img-3.jpg')")
+										.gallery__el-nav-wrap
+											.gallery__el-nav(style="background-image:url('img/img-4.jpg')")
+										.gallery__el-nav-wrap
+											.gallery__el-nav(style="background-image:url('img/img-1.jpg')")
+							.card-descr
+								.card-rating
+									+icon("star","icon")
+									.card-rating__val 4,2/ #[span 8]
+								.card-title Апельсиновая корочка в шоколадной глазури
+								.card-info Россия, Краснодарский край
+								.card-text Яблоки, как и все фрукты, лучше всего употреблять в натуральном виде, не подвергая термической обработке. Особенно хорош салат с натертыми яблоком и морковью, изюмом, корицей и горстью слегка поджаренных грецких орехов.
+								.card-get
+									.card-cost 165 ₽
+									.card-weight ~ 1,5 кг
+									.card-incr
+										+incr()
+								.structure
+									.structure__el
+										.structure__el-name калории
+										.structure__el-val 2841
+									.structure__el
+										.structure__el-name белки
+										.structure__el-val 75,4
+									.structure__el
+										.structure__el-name жиры
+										.structure__el-val 111,5
+									.structure__el
+										.structure__el-name углеводы
+										.structure__el-val 198,2
+								.structure-text энергетическая ценность указана за 100 г
+
+				//review === end
+
+	//block modal end

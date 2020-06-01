@@ -20,13 +20,16 @@ body
 .main-cont
 	center(1260px,10px)
 
+.main-cont--sm
+	center(1000px,10px)
+
 .page
 	f()
 	fl()
 	min-height 100vh
 
 .content
-	padding: 50px 0
+	padding: 30px 0 50px 0
 	flex-grow 1
 
 .content--mid
@@ -124,12 +127,194 @@ body
 	position: absolute
 	opacity 0
 	transition transform .6s, opacity .8s
-	max-width 420px
+	width 420px
 	z-index -1
 	left -9999px
 	.order__row
 		margin-bottom: 20px
 		border-bottom 0
+
+.modal--xl
+	+below(1300px)
+		width: 100%
+		max-width: 100%
+	width: 1300px
+	max-width: 1300px
+
+.modal--md
+	+below(900px)
+		width: 100%
+		max-width: 100%
+	width: 900px
+	max-width: 900px
+// area
+.modal-content--clear
+	padding: 0!important
+.modal-close--mark
+	background: $mark
+	z-index 100
+	flex(mid)
+	size 35px
+	top 0
+	right: 0
+	.icon
+		size 12px
+
+// modal area
+
+.area
+	+below(768px)
+		fw()
+	f()
+	.order-cont__el
+		+below(640px)
+
+			min-height initial
+		min-height 400px
+		position relative
+	.order-cont__el--up
+		z-index 100
+	.mCSB_inside > .mCSB_container
+		margin-right: 0
+.order-cont__el
+	width: 100%
+
+.area-tool
+	+below(768px)
+		width: 100%
+	width: 500px
+.area-map
+	+below(768px)
+		width: 100%
+		height: 400px
+	width calc(100% - 400px)
+	position relative
+	flex(mid)
+	background: $snow
+
+.area-comment
+	padding: 10px 20px
+	background: $dark
+	color #adadad
+	font-weight: 700
+	span
+		color white
+.area-tool-list
+	+below(640px)
+		max-height 100%
+	max-height: 600px
+	overflow hidden
+	position relative
+.area-map__el
+	position absolute
+	width: 100%
+	height: 100%
+	top 0
+	left 0
+	background: $gray-light
+.area-tool__title
+	font-weight: 700
+.area-tool-info
+	padding: 30px
+
+.area-el
+	padding: 20px
+	f()
+	tr()
+	cp()
+	border-bottom 1px solid $border-color
+	&:hover
+		background: #f5f5f5
+		.area-el-title
+			color darken($mark,15)
+	&:last-child
+		border-bottom 0
+.area-el--active
+	color white
+	background: $mark!important
+	.area-el-row
+		span
+			color white
+			opacity: .6
+	.area-el-title
+		color white
+	.area-el__numb
+		background: darken($mark,10)
+.area-el__img
+	size 80px
+	margin-right: 20px
+	br(10px)
+	bg-full()
+.area-el-cont
+	width calc(100% - 80px)
+.area-el-title
+	tr()
+	font-weight: 700
+	letter-spacing 0.6px
+	margin-bottom: 10px
+.area-el-row
+	font-size: 14px
+	margin-bottom: 5px
+	span
+		color $gray
+		display inline-block
+		margin-right: 5px
+	&:last-child
+		margin-bottom: 0
+
+.area-search
+	+below(768px)
+		min-height 100%
+	min-height 500px
+
+.nice-scroll
+	z-index 1
+
+.area-msg-layer
+	position absolute
+	top 0
+	left 0
+	width: 100%
+	height: 100%
+	flex(mid)
+	.btn--md
+		+below(640px)
+			font-size: 12px
+			padding: 10px
+.area-msg__text
+	margin-bottom: 20px
+	text-align center
+	@extend .type--md
+	font-weight: 700
+	span
+		display block
+		font-size: 14px
+		margin-top: 10px
+		font-weight: 400
+	p
+		margin-bottom: 10px
+.area-msg
+	+below(768px)
+		width: 300px
+	f()
+	fl()
+	br(10px)
+	padding: 20px
+	width 500px
+	background: white
+.area-msg--sm
+	+below(640px)
+		width: 70%
+		max-width 230px
+	width: 350px
+
+.area-msg-nav
+	flex(between)
+	.btn--sm
+		width: 48%
+
+// area === end
+
 
 .modal-content
 	+below(640px)
@@ -140,8 +325,8 @@ body
 		margin: 20px auto
 	background: white
 	position: relative
-	padding: 40px 45px
-	br(40px)
+	padding: 60px 45px 40px 45px
+	br(20px)
 
 .modal__show
 	max-height 100%
@@ -156,10 +341,10 @@ body
 		top 12px
 		right 12px
 	position: absolute
-	top: 20px
-	right: 20px
+	top: 10px
+	right: 10px
 	cp()
-	size 50px
+	size 40px
 	br(20px)
 	flex(mid)
 	z-index 10
@@ -199,7 +384,7 @@ body
 		font-size: 20px
 	margin-bottom: 20px
 	text-align: center
-	@extend .type--xl
+	@extend .type--md
 	font-weight: 700
 
 .modal-text
@@ -216,6 +401,39 @@ body
 	@extend .btn--md
 	@extend .btn--mark
 	width: 100%
+
+.modal-foget
+	cp()
+	margin-bottom: 30px
+
+.modal-account
+	cp()
+	margin-top: 20px
+
+.modal-town__el
+	text-align: center
+	padding: 15px
+	margin-bottom: 15px
+	font-weight 700
+	display: block
+	border: 1px dotted $snow
+	cp()
+	br(10px)
+	tr()
+	&:hover
+		border: 1px dotted $mark
+	&:last-child
+		margin-bottom: 0
+
+.modal-content--town
+	padding: 50px 0
+
+.unworked-text
+	width: 80%
+	margin: 0 auto 20px auto
+	line-height: 1.6
+	text-align center
+
 // modal === end
 
 // cookie
@@ -423,11 +641,11 @@ body
 	+below(1024px)
 		display none
 		padding: 0
-		border-top 1px solid $border-color
+		border-top 1px solid #f5f5f5
 	white-space nowrap
 	overflow-x auto
-	//border-top 1px solid $border-color
-	border-bottom 1px solid $border-color
+	//border-top 1px solid #f5f5f5
+	border-bottom 1px solid #f5f5f5
 	padding: 10px 0
 	position: relative
 	overflow-y: hidden
@@ -742,6 +960,13 @@ body
 .title-back
 	display block
 	margin-right: 5%
+
+.title--sm
+	@extend .type--main
+	font-weight: 700
+	position relative
+	line-height: 1
+	margin-bottom: 20px
 
 .title--md
 	@extend .type--md
@@ -2066,3 +2291,471 @@ select.select-beauty
 .star
 	f()
 // rating === end
+
+// ==== SALE ====
+.card-list
+	+below(850px)
+		grid-template-columns repeat(2, 1fr)
+		margin-bottom: 40px
+	+below(640px)
+		grid-template-columns 1fr
+		grid-gap 10px
+	display: grid
+	grid-gap 30px
+	grid-template-columns repeat(4, 1fr)
+.card-list__el
+	overflow: hidden
+	cp()
+	&:hover
+		.card-list__title
+			color $mark
+.card-list__img
+	padding: 40% 10%
+	bg-full()
+	position: relative
+	overflow: hidden
+	br(4px)
+.card-list__date
+	position: absolute
+	left 0
+	display: inline-block
+	bottom 0
+	background: rgba(0, 0, 0, 0.6)
+	color white
+	font-size: 14px
+	z-index 5
+	padding: 10px 20px
+.card-list__info
+	padding: 20px 0
+.card-list__title
+	@extend .type--md
+	tr()
+	font-weight: 700
+	margin-top: auto
+	line-height: 1.4
+	margin-bottom: 10px
+	display: inline-block
+.card-list__decr
+	line-height: 1.6
+	color #707173
+.news-full
+	+below(768px)
+		fw()
+	f()
+	align-items: flex-start
+	justify-content: space-between
+.news-full__img
+	+below(768px)
+		width: 100%
+		margin-bottom: 20px
+		padding: 30% 10%
+	bg-full()
+	br(10px)
+	width: 48%
+	overflow: hidden
+	padding: 20% 10%
+.news-full__cont
+	+below(768px)
+		width: 100%
+	width: 48%
+// ==== SALE ==== === end
+
+// review
+.review
+	f()
+	justify-content space-between
+	align-items: stretch
+.review-wrap
+	width calc(100% - 320px)
+.review-msg
+	width: 280px
+.msg
+	background: #f5f5f5
+	br(5px)
+	padding: 30px
+	flex(mid)
+	fl()
+
+.msg__icon
+	margin-bottom: 10px
+.msg__title
+	@extend .type--md
+	font-weight 700
+	margin-bottom: 10px
+.msg__text
+	text-align center
+	line-height: 1.4
+	margin-bottom: 20px
+	font-size: 14px
+
+.review__el
+	+below(640px)
+		padding: 20px
+	background-color #ffffff
+	margin-bottom: 20px
+	padding-bottom: 20px
+	border-bottom 1px solid #F5F5F5
+.review__el-info
+	+below(640px)
+		fw()
+	f()
+	align-items center
+	margin-bottom: 10px
+.review__el-name
+	+below(640px)
+		margin-bottom: 10px
+	@extend .type--md
+	font-weight 700
+	margin-right: 20px
+
+.review__el-date
+	color $snow
+.review__el-text
+	line-height: 1.6
+
+.answer
+	margin-top: 20px
+
+.answer-head__icon
+	margin-bottom: 10px
+.answer-head__name
+	@extend .type--lg
+	font-weight 700
+.answer-text
+	padding-left: 50px
+	p
+		&:first-child
+			margin-top: 0
+		&:last-child
+			margin-bottom: 0
+.loader
+	flex(mid)
+	margin: 30px 0
+
+
+
+// review === end
+
+//map
+.deliver-list
+	+below(768px)
+		grid-template-columns repeat(1,1fr);
+		margin-bottom: 20px
+	display: grid
+	grid-gap 20px
+	grid-template-columns repeat(3,1fr);
+	margin-bottom: 50px
+.deliver-list__el
+	padding: 25px
+	br(5px)
+	background: white
+	border 1px solid $border-color
+.deliver-list__el--active
+	background: $mark
+	.deliver-list__title
+		color white
+.deliver-list__title
+	@extend .type--md
+	color $mark
+	margin-bottom: 15px
+	font-weight: 700
+.deliver-list-wrap
+	fw()
+	f()
+	justify-content: space-between
+	margin-top: 20px
+.deliver-list-col
+	+below(1024px)
+		width: 100%
+	width: 48%
+.deliver-list-col__title
+	+below(1024px)
+		font-size: 14px
+	margin-bottom: 20px
+	color white
+	font-weight: 700
+.deliver-list-col__text
+	color white
+	margin-bottom: 10px
+	font-size: 12px
+.deliver-list__title-sub
+	margin-bottom: 20px
+	font-weight: 700
+.deliver-list__title-text
+	line-height: 1.6
+
+.deliver-map
+	+below(768px)
+		fw()
+	f()
+	justify-content: space-between
+	align-items:stretch
+	margin-bottom: 50px
+.deliver-map__item
+	+below(768px)
+		width: 100%
+		margin-bottom: 20px
+	width: 66%
+.deliver-map__item-el
+	+below(768px)
+		height: 350px
+	background: #f2f2f2
+	height: 100%
+	br(10px)
+.deliver-map__col
+	+below(768px)
+		width: 100%
+	width: 32%
+	.title--sm
+		margin-bottom: 10px
+
+.deliver-map__col-item
+	margin-bottom: 40px
+	&:last-child
+		margin-bottom: 0px
+	padding-top: 20px
+	border-top 4px solid $mark
+	.book-row
+		margin-bottom: 15px
+//.deliver-map__col-item--green
+.deliver-map__text
+	line-height: 1.6
+//map
+
+.deliver-map__phone
+	@extend .type--md
+	margin-top: 20px
+	font-weight: 700
+
+.deliver-payment-wrap
+	display: inline-block
+	margin-top: 20px
+.deliver-payment
+	f()
+	margin-top: 30px
+	border 1px solid $border-color
+	padding: 5px 10px
+	br(10px)
+	background: white
+	.icon
+		size 60px
+		margin-right: 10px
+
+.deliver-inform
+	max-width 800px
+
+.market-row
+	display: grid
+	grid-gap 20px
+	grid-template-columns: repeat(auto-fill, minmax(12rem,1fr))
+	margin-bottom: 15px
+	border-bottom 1px solid #f5f5f5
+	padding-bottom: 15px
+	padding-right: 10px
+// map === end
+
+// about
+.banner
+	bg-full()
+	padding: 15% 10%
+
+.about
+	img
+		max-width fit-content!important
+		margin: 30px auto
+.team
+	display: grid
+	grid-gap 20px
+	grid-template-columns: repeat(auto-fill, minmax(8rem,1fr))
+
+.team__el
+	bg-full()
+	padding: 50% 10%
+	br(10px)
+	overflow hidden
+	position relative
+	bsh-hover()
+	tr()
+	cp()
+	&:hover
+		.team__el-filter
+			transform translateY(0)
+
+.descr-info
+	width: 60%
+.descr-wrap
+	f()
+	justify-content space-between
+
+.descr-text
+	width: 35%
+
+.team__el-filter
+	flex(mid)
+	f()
+	tr()
+	position absolute
+	width: 100%
+	height: 100%
+	left 0
+	top 0
+	background: #111111ba
+	padding: 5px
+	color white
+	transform translateY(-200%)
+.team__el-name
+	text-align center
+	font-size: 14px
+	line-height: 1.6
+	font-weight: 700
+
+.about-wrap
+	display: grid
+	grid-gap 0
+	grid-template-columns: repeat(2, 1fr)
+	margin-bottom: 30px
+.about-img
+	bg-full()
+	padding: 30% 10%
+.about-text
+	padding: 40px
+	line-height: 1.6
+	font-size: 14px
+	flex(mid)
+	fl()
+	p
+		&:first-child
+			margin-top: 0
+		&:last-child
+			margin-bottom: 0
+
+
+// about === end
+
+.nicescroll-rails
+	z-index 1!important
+
+// modal gallary
+.card-wrap
+	+below(768px)
+		fw()
+	f()
+	justify-content space-between
+
+.card-img
+	+below(768px)
+		width: 100%
+	width: 50%
+	.gallery-slider-wrap
+		margin-top: 0
+
+.gallery__el
+	bg-full()
+	padding: 50% 10%
+.gallery__el-nav
+	bg-full()
+	cp()
+	padding: 40% 10%
+	br(5px)
+
+.gallery-slider-nav
+	padding: 0 15px 15px 15px
+	.slick-slide
+		+below(480px)
+			margin: 0 3px
+		margin: 0 10px
+	.slick-current
+		tr()
+		opacity: .4
+	.slick-track
+		margin-left: 0px
+	.slick-list
+		margin: 0 -10px
+.gallery-slider
+	margin-bottom 10px
+// modal gallary === end
+
+
+
+.card-descr
+	+below(768px)
+		width: 100%
+	+below(480px)
+		padding: 15px
+	width: 50%
+	padding: 30px
+
+.card-title
+	@extend .type--md
+	font-weight 700
+	margin-bottom: 10px
+
+.card-info
+	color $snow
+	margin-bottom: 30px
+.card-text
+	line-height: 1.6
+	margin-bottom: 30px
+.card-get
+	+below(480px)
+		fw()
+	f()
+	align-items center
+	margin-bottom: 30px
+.card-cost
+	+below(480px)
+		font-size: 32px
+		text-align center
+	font-weight: 700
+	margin-right: 20px
+	@extend .type--md
+
+.card-weight
+	font-size: 14px
+	margin-right: 20px
+.card-incr
+	+below(480px)
+		width: 100%
+		margin-top: 20px
+		margin-left: 0
+		.incr
+			justify-content: flex-start
+	+below(768px)
+		margin-right: 0
+	margin-left: auto
+	margin-right: 10%
+.card-rating
+	f()
+	align-items center
+	margin-bottom: 20px
+	.icon
+		fill $mark
+		size 20px
+		margin-right: 10px
+
+.card-rating__val
+	color $gray
+
+.structure
+	+below(480px)
+		grid-template-columns: repeat(2, 1fr)
+	display: grid
+	grid-gap 10px
+	grid-template-columns: repeat(4, 1fr)
+	margin-bottom: 10px
+.structure__el
+	padding: 10px 5px
+	border 1px solid $border-color
+	br(10px)
+	flex(mid)
+	fl()
+.structure__el-name
+	font-size: 12px
+	color $snow
+	margin-bottom: 5px
+.structure-text
+	+below(480px)
+		text-align center
+	text-align: right
+	color $snow
+	@extend .type--sm
